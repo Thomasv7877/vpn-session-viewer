@@ -173,10 +173,10 @@ def sendMail(jsonMsg):
     message['From'] = mailFrom
     message['To'] = mailTo
 
-    s = smtplib.SMTP('localhost:1025')
-    #s = smtplib.SMTP(mailServer, mailPort)
-    #s.starttls()
-    #s.login(mailUser, mailPw)
+    #s = smtplib.SMTP('localhost:1025')
+    s = smtplib.SMTP(mailServer, mailPort)
+    s.starttls()
+    s.login(mailUser, mailPw)
     s.send_message(message)
     s.quit()
     print('monitoring mail gestuurd')
