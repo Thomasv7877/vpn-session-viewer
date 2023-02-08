@@ -1,0 +1,11 @@
+flask
+flask_socketio
+flask.cli
+#simple-websocket
+gevent
+gevent-websocket
+#wfastcgi
+#eventlet
+pytz
+gunicorn
+pyjwt
