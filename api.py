@@ -12,7 +12,7 @@ import json
 bp = Blueprint('api', __name__, template_folder='templates')
 
 hc_user = "promon"
-hc_pw = 'P@ssw0rd!'
+hc_pw = '12345'
 
 mailTo = 'mail@mail.com'
 mailFrom = mailUser = 'mail@mail.com'
@@ -173,10 +173,10 @@ def sendMail(jsonMsg):
     message['From'] = mailFrom
     message['To'] = mailTo
 
-    # s = smtplib.SMTP('localhost:1025')
-    s = smtplib.SMTP(mailServer, mailPort)
-    s.starttls()
-    s.login(mailUser, mailPw)
+    s = smtplib.SMTP('localhost:1025')
+    #s = smtplib.SMTP(mailServer, mailPort)
+    #s.starttls()
+    #s.login(mailUser, mailPw)
     s.send_message(message)
     s.quit()
     print('monitoring mail gestuurd')

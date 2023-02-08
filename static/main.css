@@ -7,6 +7,10 @@ body {
   table {
     background-color: #F7F7F9;
   }
+  #toplogo {
+    width: 20%;
+    margin-bottom: 1em;
+  }
   .err_404 img {
     display: block;
     margin: auto;

@@ -20,7 +20,8 @@ if(authenticated == 'True'){
    var fadeDiv = document.getElementById("fadeToggle")
    fadeDiv.classList.remove("fadeToggle");
    var authPrompt = document.getElementById("authPrompt")
-   authPrompt.style.zIndex = -1
+   authPrompt.style.zIndex = -1;
+   authPrompt.style.visibility = 'hidden';
 }
 
 var userList = document.getElementsByName('users');
