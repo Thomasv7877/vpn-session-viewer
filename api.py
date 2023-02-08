@@ -129,7 +129,7 @@ def login_user():
 def slogin():
     from app import getSecret
     password = request.form['password']
-    user = getUserByName(hc_pw)
+    user = getUserByName(hc_user)
     if check_password_hash(user[3], password):
        token = jwt.encode({'public_id' : user[1], 'exp' : datetime.datetime.utcnow() + datetime.timedelta(days=7)}, getSecret(), "HS256")
        resp = make_response(redirect(url_for('list')))

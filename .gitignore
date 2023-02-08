@@ -1,3 +1,6 @@
 venv
 testing
 audit_export
+database.db
+userDatabase.db
+__pycache__
