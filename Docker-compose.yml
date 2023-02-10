@@ -2,18 +2,11 @@ version: '3.1'
 services:
 
   vpn-sessions:
-    #container_name: sessions
-    #build: .
+    container_name: sessions
+    build: .
     volumes:
      - azure_share_name:/audit_export
     image: az_ctr_repo.azurecr.io/sessions
     ports:
       - 80:80
       - 587:587
-
-  volumes:
-    azure_share_name:
-      driver: azure_file
-      driver_opts:
-        share_name: azure_share_name
-        storage_account_name: azure_storage_acct
